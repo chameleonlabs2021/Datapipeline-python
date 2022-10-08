@@ -1,0 +1,106 @@
+{
+    "request_id": "unique_request_id_3",
+    "resource_batch": {
+        "id": "unique_resource_batch_id_3",
+        "tranche_id": "tranche_123",
+        "resources": [
+        {
+            "id": "124",
+            "dependencies": [
+                "account2"
+            ],
+            "customer_resource": {
+                "status": "CUSTOMER_STATUS_ACTIVE",
+                "identifiers": [
+                {
+                    "identifier_type": "IDENTIFIER_TYPE_USERNAME",
+                    "identifier": "MyUsernameIsAnother"
+                }
+                ],
+                "customer_details": {
+                    "title": "CUSTOMER_TITLE_MISS",
+                    "first_name": "Jane",
+                    "middle_name": "",
+                    "last_name": "Doe",
+                    "dob": "1970-02-01",
+                    "gender": "CUSTOMER_GENDER_FEMALE",
+                    "nationality": "British",
+                    "email_address": "snail@address.com",
+                    "mobile_phone_number": "+44740999998",
+                    "contact_method": "CUSTOMER_CONTACT_METHOD_NONE",
+                    "country_of_residence": "GB",
+                    "country_of_taxation": "GB"
+                },
+                "additional_details": {
+                "KEY": "VALUE"
+                }
+            }
+        },
+        {
+            "id": "125",
+            "dependencies": [],
+            "customer_resource": {
+                "status": "CUSTOMER_STATUS_ACTIVE",
+                "identifiers": [
+                {
+                    "identifier_type": "IDENTIFIER_TYPE_USERNAME",
+                    "identifier": "MyUsernameIsThat"
+                }
+                ],
+                "customer_details": {
+                "title": "CUSTOMER_TITLE_MR",
+                "first_name": "Jack",
+                "middle_name": "",
+                "last_name": "Doe",
+                "dob": "1971-01-01",
+                "gender": "CUSTOMER_GENDER_MALE",
+                "nationality": "British",
+                "email_address": "email@address.com",
+                "mobile_phone_number": "+44740999997",
+                "contact_method": "CUSTOMER_CONTACT_METHOD_NONE",
+                "country_of_residence": "GB",
+                "country_of_taxation": "GB"
+                },
+                "additional_details": {
+                "KEY": "VALUE"
+                }
+            }
+        },
+        {
+            "id": "account2",
+            "dependencies": [
+                "124", "paymentDeviceLink2"
+            ],
+            "account_resource": {
+                "product_version_id": "283",
+                "permitted_denominations": [
+                    "GBP"
+                ],
+                "status": "ACCOUNT_STATUS_OPEN",
+                "stakeholder_ids": [
+                    "124"
+                ],
+                "instance_param_vals": {
+                    "interest_payment_day": "1"
+                },
+                "details": {
+                    "KEY": "VALUE"
+                }
+            }
+        },
+        {
+            "id": "paymentDevice1",
+            "dependencies": [
+                "paymentDeviceLink1"
+            ],
+            "payment_device_resource": {
+                "routing_info": {
+                    "KEY": "value1"
+                },
+                "status": "PAYMENT_DEVICE_STATUS_PENDING",
+                "tags": ["hello", "moto"]
+            }
+        }
+        ]
+    }
+}

@@ -1,0 +1,105 @@
+2022-10-02 23:42:32,178 - mylog - INFO - ************===========Starting the Data migration process========************
+2022-10-02 23:42:32,190 - mylog - INFO - Calling the script to  Load raw files to raw tables
+2022-10-02 23:42:32,191 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-10-02 23:42:32,223 - mylog - INFO - Dropping the product_details 
+2022-10-02 23:42:32,235 - mylog - INFO - product_details dropped 
+2022-10-02 23:42:32,861 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-10-02 23:42:33,131 - mylog - INFO - Dropping the customer_details 
+2022-10-02 23:42:33,137 - mylog - INFO - customer_details dropped 
+2022-10-02 23:42:33,204 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-10-02 23:42:33,219 - mylog - INFO - Dropping the customer_transaction 
+2022-10-02 23:42:33,227 - mylog - INFO - customer_transaction dropped 
+2022-10-02 23:42:34,333 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-10-02 23:42:34,348 - mylog - INFO - Dropping the customer_payment 
+2022-10-02 23:42:34,556 - mylog - INFO - customer_payment dropped 
+2022-10-02 23:42:34,690 - mylog - INFO - Calling the script to Load raw tables to Stg tables
+2022-10-02 23:42:34,690 - mylog - INFO - ==============Raw tables to staging table load started==============
+2022-10-02 23:42:34,691 - mylog - INFO - Raw tables to accounts table load started../sql-scripts/accountsRawToStg.sql 
+2022-10-02 23:42:34,710 - mylog - INFO - Raw tables to accounts table load completed
+2022-10-02 23:42:34,712 - mylog - INFO - Calling the data validation script
+2022-10-02 23:42:34,726 - mylog - INFO - ************===========Starting to validate the staging accounts========************
+2022-10-02 23:42:34,743 - mylog - INFO - ************===========Querying the  accounts table========************
+2022-10-02 23:42:34,758 - mylog - INFO - ************===========Checking if the table accounts is empty========************
+2022-10-02 23:42:34,882 - mylog - INFO - sequence_id has NO missing value!
+2022-10-02 23:42:34,931 - mylog - INFO - id has 1 missing value(s)
+2022-10-02 23:42:34,974 - mylog - INFO - name has 1 missing value(s)
+2022-10-02 23:42:35,023 - mylog - INFO - product_id has 1 missing value(s)
+2022-10-02 23:42:35,071 - mylog - INFO - product_version_id has 1 missing value(s)
+2022-10-02 23:42:35,113 - mylog - INFO - permitted_denominations_0 has 1 missing value(s)
+2022-10-02 23:42:35,162 - mylog - INFO - status has NO missing value!
+2022-10-02 23:42:35,211 - mylog - INFO - opening_timestamp has NO missing value!
+2022-10-02 23:42:35,259 - mylog - INFO - closing_timestamp has NO missing value!
+2022-10-02 23:42:35,306 - mylog - INFO - stakeholder_ids_0 has NO missing value!
+2022-10-02 23:42:35,356 - mylog - INFO - instance_param_vals_key has NO missing value!
+2022-10-02 23:42:35,416 - mylog - INFO - derived_instance_param_vals_key has NO missing value!
+2022-10-02 23:42:35,474 - mylog - INFO - details_key has NO missing value!
+2022-10-02 23:42:35,534 - mylog - INFO - accounting_tside has NO missing value!
+2022-10-02 23:42:35,591 - mylog - INFO - tm_load_timestamp has NO missing value!
+2022-10-02 23:42:35,639 - mylog - INFO - load_tm_status has NO missing value!
+2022-10-02 23:42:35,691 - mylog - INFO - ************===========table accounts is not empty========************
+2022-10-02 23:42:35,750 - mylog - INFO - select count(*) from  accounts where load_TM_status <> 'Success'
+2022-10-02 23:42:35,756 - mylog - INFO - Total accounts count: 59
+2022-10-02 23:42:35,756 - mylog - INFO - Batch size: 10
+2022-10-02 23:42:35,757 - mylog - INFO - Number of nfloop: 6
+2022-10-02 23:42:35,757 - mylog - INFO - ==============Batch  0 started ============== 
+2022-10-02 23:42:35,758 - mylog - INFO - Generating the json for the batch size 10 loaded records between 0 and 10
+2022-10-02 23:42:35,758 - mylog - INFO - ==============Generate json job started ==============
+2022-10-02 23:42:35,783 - mylog - INFO - accounts_out.json file is deleted
+2022-10-02 23:42:35,784 - mylog - INFO - accounts_out.json file not available
+2022-10-02 23:42:36,006 - mylog - INFO - Push json for the batch size 10 loaded records between 0 and 10 to kafka
+2022-10-02 23:42:36,008 - mylog - INFO - ==============Kafka job started==============
+2022-10-02 23:42:36,014 - mylog - INFO - accounts kafka push successes for the records between 0 and 10
+2022-10-02 23:42:36,015 - mylog - INFO - ==============Batch  0 completed ==============
+2022-10-02 23:42:36,015 - mylog - INFO - ==============Batch  1 started ============== 
+2022-10-02 23:42:36,015 - mylog - INFO - Generating the json for the batch size 10 loaded records between 10 and 20
+2022-10-02 23:42:36,016 - mylog - INFO - ==============Generate json job started ==============
+2022-10-02 23:42:36,022 - mylog - INFO - accounts_out.json file is deleted
+2022-10-02 23:42:36,022 - mylog - INFO - accounts_out.json file not available
+2022-10-02 23:42:36,275 - mylog - INFO - Push json for the batch size 10 loaded records between 10 and 20 to kafka
+2022-10-02 23:42:36,276 - mylog - INFO - ==============Kafka job started==============
+2022-10-02 23:42:36,282 - mylog - INFO - accounts kafka push successes for the records between 10 and 20
+2022-10-02 23:42:36,283 - mylog - INFO - ==============Batch  1 completed ==============
+2022-10-02 23:42:36,283 - mylog - INFO - ==============Batch  2 started ============== 
+2022-10-02 23:42:36,284 - mylog - INFO - Generating the json for the batch size 10 loaded records between 20 and 30
+2022-10-02 23:42:36,285 - mylog - INFO - ==============Generate json job started ==============
+2022-10-02 23:42:36,293 - mylog - INFO - accounts_out.json file is deleted
+2022-10-02 23:42:36,294 - mylog - INFO - accounts_out.json file not available
+2022-10-02 23:42:36,621 - mylog - INFO - Push json for the batch size 10 loaded records between 20 and 30 to kafka
+2022-10-02 23:42:36,621 - mylog - INFO - ==============Kafka job started==============
+2022-10-02 23:42:36,626 - mylog - INFO - accounts kafka push successes for the records between 20 and 30
+2022-10-02 23:42:36,627 - mylog - INFO - ==============Batch  2 completed ==============
+2022-10-02 23:42:36,628 - mylog - INFO - ==============Batch  3 started ============== 
+2022-10-02 23:42:36,629 - mylog - INFO - Generating the json for the batch size 10 loaded records between 30 and 40
+2022-10-02 23:42:36,629 - mylog - INFO - ==============Generate json job started ==============
+2022-10-02 23:42:36,640 - mylog - INFO - accounts_out.json file is deleted
+2022-10-02 23:42:36,641 - mylog - INFO - accounts_out.json file not available
+2022-10-02 23:42:36,939 - mylog - INFO - Push json for the batch size 10 loaded records between 30 and 40 to kafka
+2022-10-02 23:42:36,940 - mylog - INFO - ==============Kafka job started==============
+2022-10-02 23:42:36,948 - mylog - INFO - accounts kafka push successes for the records between 30 and 40
+2022-10-02 23:42:36,949 - mylog - INFO - ==============Batch  3 completed ==============
+2022-10-02 23:42:36,950 - mylog - INFO - ==============Batch  4 started ============== 
+2022-10-02 23:42:36,951 - mylog - INFO - Generating the json for the batch size 10 loaded records between 40 and 50
+2022-10-02 23:42:36,952 - mylog - INFO - ==============Generate json job started ==============
+2022-10-02 23:42:36,963 - mylog - INFO - accounts_out.json file is deleted
+2022-10-02 23:42:36,966 - mylog - INFO - accounts_out.json file not available
+2022-10-02 23:42:37,296 - mylog - INFO - Push json for the batch size 10 loaded records between 40 and 50 to kafka
+2022-10-02 23:42:37,297 - mylog - INFO - ==============Kafka job started==============
+2022-10-02 23:42:37,304 - mylog - INFO - accounts kafka push successes for the records between 40 and 50
+2022-10-02 23:42:37,307 - mylog - INFO - ==============Batch  4 completed ==============
+2022-10-02 23:42:37,309 - mylog - INFO - ==============Batch  5 started ============== 
+2022-10-02 23:42:37,310 - mylog - INFO - Generating the json for the batch size 10 loaded records between 50 and 60
+2022-10-02 23:42:37,311 - mylog - INFO - ==============Generate json job started ==============
+2022-10-02 23:42:37,322 - mylog - INFO - accounts_out.json file is deleted
+2022-10-02 23:42:37,325 - mylog - INFO - accounts_out.json file not available
+2022-10-02 23:42:37,561 - mylog - INFO - Push json for the batch size 10 loaded records between 50 and 60 to kafka
+2022-10-02 23:42:37,562 - mylog - INFO - ==============Kafka job started==============
+2022-10-02 23:42:37,566 - mylog - INFO - accounts kafka push successes for the records between 50 and 60
+2022-10-02 23:42:37,566 - mylog - INFO - ==============Batch  5 completed ==============
+2022-10-02 23:42:37,568 - mylog - INFO - ==============Splitting recon JSON files to smaller chunks==============
+2022-10-02 23:42:37,568 - mylog - INFO - Splitting accounts json file started
+2022-10-02 23:42:37,698 - mylog - INFO - Splitting accounts json file Completed
+2022-10-02 23:42:37,698 - mylog - INFO - ==============Converting recon JSON smaller chunks to CSV files started ==============
+2022-10-02 23:42:37,699 - mylog - INFO - directory ======> ../json/recon/accounts/, table_name ====> accounts
+2022-10-02 23:42:37,713 - mylog - INFO - f==> ../json/recon/accounts/accounts_out0.json filename ======> accounts_out0.json, table_name ====> accounts
+2022-10-02 23:42:37,879 - mylog - INFO - ==============Converting recon JSON smaller chunks to CSV files completed==============
+2022-10-02 23:42:37,908 - mylog - INFO - ************===========Starting to load TM response to recon table========************

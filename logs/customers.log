@@ -1,0 +1,82 @@
+2022-10-01 12:50:52,180 - mylog - INFO - ************===========Starting the Data migration process========************
+2022-10-01 12:50:52,186 - mylog - INFO - Calling the script to  Load raw files to raw tables
+2022-10-01 12:50:52,186 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-10-01 12:50:52,193 - mylog - INFO - Dropping the product_details 
+2022-10-01 12:50:52,204 - mylog - INFO - product_details dropped 
+2022-10-01 12:50:52,342 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-10-01 12:50:52,349 - mylog - INFO - Dropping the customer_details 
+2022-10-01 12:50:52,354 - mylog - INFO - customer_details dropped 
+2022-10-01 12:50:52,387 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-10-01 12:50:52,395 - mylog - INFO - Dropping the customer_transaction 
+2022-10-01 12:50:52,400 - mylog - INFO - customer_transaction dropped 
+2022-10-01 12:50:52,491 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-10-01 12:50:52,501 - mylog - INFO - Dropping the customer_payment 
+2022-10-01 12:50:52,505 - mylog - INFO - customer_payment dropped 
+2022-10-01 12:50:52,596 - mylog - INFO - Calling the script to Load raw tables to Stg tables
+2022-10-01 12:50:52,596 - mylog - INFO - ==============Raw tables to staging table load started==============
+2022-10-01 12:50:52,597 - mylog - INFO - Raw tables to customers table load started../sql-scripts/customersRawToStg.sql 
+2022-10-01 12:50:52,616 - mylog - INFO - Raw tables to customers table load completed
+2022-10-01 12:50:52,616 - mylog - INFO - Calling the data validation script
+2022-10-01 12:50:52,624 - mylog - INFO - ************===========Starting to validate the staging tables========************
+2022-10-01 12:50:52,635 - mylog - INFO - ************===========querying the table customers========************
+2022-10-01 12:50:52,647 - mylog - INFO - ************===========checking if the table customers is empty========************
+2022-10-01 12:50:52,648 - mylog - INFO - ************===========table customers is not empty========************
+2022-10-01 12:50:52,648 - mylog - INFO - sequence_id has NO missing value!
+2022-10-01 12:50:52,649 - mylog - INFO - id has NO missing value!
+2022-10-01 12:50:52,649 - mylog - INFO - status has NO missing value!
+2022-10-01 12:50:52,649 - mylog - INFO - identifiers_identifier_type_email has NO missing value!
+2022-10-01 12:50:52,650 - mylog - INFO - identifiers_identifier_email has NO missing value!
+2022-10-01 12:50:52,650 - mylog - INFO - identifiers_identifier_type_username has NO missing value!
+2022-10-01 12:50:52,651 - mylog - INFO - identifiers_identifier_username has NO missing value!
+2022-10-01 12:50:52,651 - mylog - INFO - identifiers_identifier_type_phone has NO missing value!
+2022-10-01 12:50:52,652 - mylog - INFO - identifiers_identifier_phone has NO missing value!
+2022-10-01 12:50:52,652 - mylog - INFO - customer_details_title has NO missing value!
+2022-10-01 12:50:52,652 - mylog - INFO - customer_details_first_name has NO missing value!
+2022-10-01 12:50:52,653 - mylog - INFO - customer_details_middle_name has NO missing value!
+2022-10-01 12:50:52,653 - mylog - INFO - customer_details_last_name has NO missing value!
+2022-10-01 12:50:52,654 - mylog - INFO - customer_details_dob has NO missing value!
+2022-10-01 12:50:52,654 - mylog - INFO - customer_details_gender has NO missing value!
+2022-10-01 12:50:52,655 - mylog - INFO - customer_details_nationality has NO missing value!
+2022-10-01 12:50:52,655 - mylog - INFO - customer_details_email_address has NO missing value!
+2022-10-01 12:50:52,655 - mylog - INFO - customer_details_mobile_phone_number has NO missing value!
+2022-10-01 12:50:52,656 - mylog - INFO - customer_details_home_phone_number has NO missing value!
+2022-10-01 12:50:52,656 - mylog - INFO - customer_details_business_phone_number has NO missing value!
+2022-10-01 12:50:52,657 - mylog - INFO - customer_details_contact_method has NO missing value!
+2022-10-01 12:50:52,657 - mylog - INFO - customer_details_country_of_residence has NO missing value!
+2022-10-01 12:50:52,658 - mylog - INFO - customer_details_country_of_taxation has NO missing value!
+2022-10-01 12:50:52,658 - mylog - INFO - customer_details_accessibility has NO missing value!
+2022-10-01 12:50:52,659 - mylog - INFO - customer_details_external_customer_id has NO missing value!
+2022-10-01 12:50:52,659 - mylog - INFO - additional_details_key has NO missing value!
+2022-10-01 12:50:52,660 - mylog - INFO - additional_details_value has NO missing value!
+2022-10-01 12:50:52,660 - mylog - INFO - tm_load_timestamp has NO missing value!
+2022-10-01 12:50:52,661 - mylog - INFO - load_tm_status has NO missing value!
+2022-10-01 12:50:52,662 - mylog - INFO - select count(*) from  customers where load_TM_status <> 'Success'
+2022-10-01 12:50:52,667 - mylog - INFO - Total customers count: 18
+2022-10-01 12:50:52,667 - mylog - INFO - Batch size: 10
+2022-10-01 12:50:52,667 - mylog - INFO - Number of nfloop: 2
+2022-10-01 12:50:52,668 - mylog - INFO - ==============Batch  0 started ============== 
+2022-10-01 12:50:52,668 - mylog - INFO - Generating the json for the batch size 10 loaded records between 0 and 10
+2022-10-01 12:50:52,668 - mylog - INFO - ==============Generate json job started ==============
+2022-10-01 12:50:52,680 - mylog - INFO - customers_out.json file is deleted
+2022-10-01 12:50:52,680 - mylog - INFO - customers_out.json file not available
+2022-10-01 12:50:52,785 - mylog - INFO - Push json for the batch size 10 loaded records between 0 and 10 to kafka
+2022-10-01 12:50:52,785 - mylog - INFO - ==============Kafka job started==============
+2022-10-01 12:50:52,788 - mylog - INFO - customers kafka push successes for the records between 0 and 10
+2022-10-01 12:50:52,788 - mylog - INFO - ==============Batch  0 completed ==============
+2022-10-01 12:50:52,789 - mylog - INFO - ==============Batch  1 started ============== 
+2022-10-01 12:50:52,789 - mylog - INFO - Generating the json for the batch size 10 loaded records between 10 and 20
+2022-10-01 12:50:52,789 - mylog - INFO - ==============Generate json job started ==============
+2022-10-01 12:50:52,793 - mylog - INFO - customers_out.json file is deleted
+2022-10-01 12:50:52,793 - mylog - INFO - customers_out.json file not available
+2022-10-01 12:50:52,919 - mylog - INFO - Push json for the batch size 10 loaded records between 10 and 20 to kafka
+2022-10-01 12:50:52,920 - mylog - INFO - ==============Kafka job started==============
+2022-10-01 12:50:52,923 - mylog - INFO - customers kafka push successes for the records between 10 and 20
+2022-10-01 12:50:52,924 - mylog - INFO - ==============Batch  1 completed ==============
+2022-10-01 12:50:52,926 - mylog - INFO - ==============Splitting recon JSON files to smaller chunks==============
+2022-10-01 12:50:52,926 - mylog - INFO - Splitting customers json file started
+2022-10-01 12:50:52,979 - mylog - INFO - Splitting customers json file Completed
+2022-10-01 12:50:52,979 - mylog - INFO - ==============Converting recon JSON smaller chunks to CSV files started ==============
+2022-10-01 12:50:52,979 - mylog - INFO - directory ======> ../json/recon/customers/, table_name ====> customers
+2022-10-01 12:50:52,984 - mylog - INFO - f==> ../json/recon/customers/customers_out0.json filename ======> customers_out0.json, table_name ====> customers
+2022-10-01 12:50:53,032 - mylog - INFO - ==============Converting recon JSON smaller chunks to CSV files completed==============
+2022-10-01 12:50:53,058 - mylog - INFO - ************===========Starting to load TM response to recon table========************

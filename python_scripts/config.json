@@ -1,0 +1,26 @@
+{
+        "StgDatabase" : "staging",
+        "ReconDatabase" : "recon",
+        "USER" : "postgres",
+        "PASSWORD" : "1234",
+        "HOST" :"127.0.0.1",
+        "PORT" : "6666",
+        "batch_size": 10,
+        "rootPath"  : "../",
+        "jsonOut" : "../json/outgoing/",
+        "jsonRecon" : "../json/recon/",
+        "jsonReconCust" : "../json/recon/customers",
+        "jsonReconAcct" : "../json/recon/accounts",
+        "jsonReconAcctPlanAssoc" : "../json/recon/account_plan_assocs/",
+        "jsonReconFlag" : "../json/recon/flags/",
+        "jsonReconPlan" : "../json/recon/plan/",
+        "jsonReconPIBatch" : "../json/recon/posting_instruction_batch/",
+        "jsonReconPDLink" : "../json/recon/payment_device_link/",
+        "jsonReconRestrictionSet" : "../json/recon/restriction_set/",
+        "jsonReconPaymentDevice" : "../json/recon/payment_device/",
+             "logs" : "../logs/",
+        "sourcePath" : "../csv-files/src/",
+        "reconCsvPath" : "../csv-files/recon/",
+        "sqlScriptsPath" : "../sql-scripts/"
+
+}

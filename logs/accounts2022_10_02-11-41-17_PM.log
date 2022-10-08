@@ -1,0 +1,24 @@
+2022-10-02 23:41:17,760 - mylog - INFO - ************===========Starting the Data migration process========************
+2022-10-02 23:41:17,779 - mylog - INFO - Calling the script to  Load raw files to raw tables
+2022-10-02 23:41:17,781 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-10-02 23:41:17,812 - mylog - INFO - Dropping the product_details 
+2022-10-02 23:41:17,824 - mylog - INFO - product_details dropped 
+2022-10-02 23:41:18,182 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-10-02 23:41:18,202 - mylog - INFO - Dropping the customer_details 
+2022-10-02 23:41:18,210 - mylog - INFO - customer_details dropped 
+2022-10-02 23:41:18,280 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-10-02 23:41:18,298 - mylog - INFO - Dropping the customer_transaction 
+2022-10-02 23:41:18,305 - mylog - INFO - customer_transaction dropped 
+2022-10-02 23:41:18,464 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-10-02 23:41:18,491 - mylog - INFO - Dropping the customer_payment 
+2022-10-02 23:41:18,503 - mylog - INFO - customer_payment dropped 
+2022-10-02 23:41:18,768 - mylog - INFO - Calling the script to Load raw tables to Stg tables
+2022-10-02 23:41:18,769 - mylog - INFO - ==============Raw tables to staging table load started==============
+2022-10-02 23:41:18,770 - mylog - INFO - Raw tables to accounts table load started../sql-scripts/accountsRawToStg.sql 
+2022-10-02 23:41:18,832 - mylog - INFO - Raw tables to accounts table load completed
+2022-10-02 23:41:18,835 - mylog - INFO - Calling the data validation script
+2022-10-02 23:41:18,861 - mylog - INFO - ************===========Starting to validate the staging accounts========************
+2022-10-02 23:41:18,895 - mylog - INFO - ************===========Querying the  accounts table========************
+2022-10-02 23:41:18,925 - mylog - INFO - ************===========Checking if the table accounts is empty========************
+2022-10-02 23:41:19,157 - mylog - INFO - sequence_id has NO missing value!
+2022-10-02 23:41:19,235 - mylog - INFO - id has 1 missing value(s)

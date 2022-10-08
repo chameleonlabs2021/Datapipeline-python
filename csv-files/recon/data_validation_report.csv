@@ -1,0 +1,52 @@
+Tablename,Column_name,Remarks
+customers,,customers is not empty
+customers,sequence_id,sequence_id has 0 NO missing value!
+customers,id,id has 0 NO missing value!
+customers,status,status has 0 NO missing value!
+customers,identifiers_identifier_type_email,identifiers_identifier_type_email has 0 NO missing value!
+customers,identifiers_identifier_email,identifiers_identifier_email has 0 NO missing value!
+customers,identifiers_identifier_type_username,identifiers_identifier_type_username has 0 NO missing value!
+customers,identifiers_identifier_username,identifiers_identifier_username has 0 NO missing value!
+customers,identifiers_identifier_type_phone,identifiers_identifier_type_phone has 0 NO missing value!
+customers,identifiers_identifier_phone,identifiers_identifier_phone has 0 NO missing value!
+customers,customer_details_title,customer_details_title has 0 NO missing value!
+customers,customer_details_first_name,customer_details_first_name has 0 NO missing value!
+customers,customer_details_middle_name,customer_details_middle_name has 0 NO missing value!
+customers,customer_details_last_name,customer_details_last_name has 0 NO missing value!
+customers,customer_details_dob,customer_details_dob has 0 NO missing value!
+customers,customer_details_gender,customer_details_gender has 0 NO missing value!
+customers,customer_details_nationality,customer_details_nationality has 0 NO missing value!
+customers,customer_details_email_address,customer_details_email_address has 0 NO missing value!
+customers,customer_details_mobile_phone_number,customer_details_mobile_phone_number has 0 NO missing value!
+customers,customer_details_home_phone_number,customer_details_home_phone_number has 0 NO missing value!
+customers,customer_details_business_phone_number,customer_details_business_phone_number has 0 NO missing value!
+customers,customer_details_contact_method,customer_details_contact_method has 0 NO missing value!
+customers,customer_details_country_of_residence,customer_details_country_of_residence has 0 NO missing value!
+customers,customer_details_country_of_taxation,customer_details_country_of_taxation has 0 NO missing value!
+customers,customer_details_accessibility,customer_details_accessibility has 0 NO missing value!
+customers,customer_details_external_customer_id,customer_details_external_customer_id has 0 NO missing value!
+customers,additional_details_key,additional_details_key has 0 NO missing value!
+customers,additional_details_value,additional_details_value has 0 NO missing value!
+customers,tm_load_timestamp,tm_load_timestamp has 0 NO missing value!
+customers,load_tm_status,load_tm_status has 0 NO missing value!
+Tablename,Column_name,Remarks
+accounts,,accounts is not empty
+accounts,sequence_id,sequence_id has 0 NO missing value!
+Tablename,Column_name,Remarks
+accounts,,accounts is not empty
+accounts,sequence_id,sequence_id has 0 NO missing value!
+accounts,id,id has 1 missing value(s)
+accounts,name,name has 1 missing value(s)
+accounts,product_id,product_id has 1 missing value(s)
+accounts,product_version_id,product_version_id has 1 missing value(s)
+accounts,permitted_denominations_0,permitted_denominations_0 has 1 missing value(s)
+accounts,status,status has 0 NO missing value!
+accounts,opening_timestamp,opening_timestamp has 0 NO missing value!
+accounts,closing_timestamp,closing_timestamp has 0 NO missing value!
+accounts,stakeholder_ids_0,stakeholder_ids_0 has 0 NO missing value!
+accounts,instance_param_vals_key,instance_param_vals_key has 0 NO missing value!
+accounts,derived_instance_param_vals_key,derived_instance_param_vals_key has 0 NO missing value!
+accounts,details_key,details_key has 0 NO missing value!
+accounts,accounting_tside,accounting_tside has 0 NO missing value!
+accounts,tm_load_timestamp,tm_load_timestamp has 0 NO missing value!
+accounts,load_tm_status,load_tm_status has 0 NO missing value!

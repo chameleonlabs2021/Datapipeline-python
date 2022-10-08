@@ -1,0 +1,120 @@
+2022-09-19 08:38:06,053 - mylog - INFO - ************===========Starting the Data migration process========************
+2022-09-19 08:38:06,073 - mylog - INFO - Load raw files to raw tables
+2022-09-19 08:38:06,074 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-09-19 08:38:06,105 - mylog - INFO - Dropping the product_details 
+2022-09-19 08:38:06,119 - mylog - INFO - product_details dropped 
+2022-09-19 08:38:06,509 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-09-19 08:38:06,532 - mylog - INFO - Dropping the customer_details 
+2022-09-19 08:38:06,540 - mylog - INFO - customer_details dropped 
+2022-09-19 08:38:06,642 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-09-19 08:38:06,671 - mylog - INFO - Dropping the customer_transaction 
+2022-09-19 08:38:06,684 - mylog - INFO - customer_transaction dropped 
+2022-09-19 08:38:06,967 - mylog - INFO - ************===========Starting to load raw files to raw tables========************
+2022-09-19 08:38:06,990 - mylog - INFO - Dropping the customer_payment 
+2022-09-19 08:38:07,000 - mylog - INFO - customer_payment dropped 
+2022-09-19 08:38:07,273 - mylog - INFO - Load raw tables to Stg tables
+2022-09-19 08:38:07,274 - mylog - INFO - ==============Raw tables to staging table load started==============
+2022-09-19 08:38:07,275 - mylog - INFO - Raw tables to accounts table load started../sql-scripts/accountsRawToStg.sql 
+2022-09-19 08:38:07,323 - mylog - INFO - Raw tables to accounts table load completed
+2022-09-19 08:38:07,328 - mylog - INFO - select count(*) from  accounts where load_TM_status <> 'Success'
+2022-09-19 08:38:07,338 - mylog - INFO - Total accounts count: 59
+2022-09-19 08:38:07,339 - mylog - INFO - Batch size: 10
+2022-09-19 08:38:07,340 - mylog - INFO - Number of nfloop: 6
+2022-09-19 08:38:07,341 - mylog - INFO - ==============Batch  0 started ============== 
+2022-09-19 08:38:07,342 - mylog - INFO - Generating the json for the batch size 10 loaded records between 0 and 10
+2022-09-19 08:38:07,343 - mylog - INFO - ==============Generate json job started ==============
+2022-09-19 08:38:07,364 - mylog - INFO - accounts_out.json file is deleted
+2022-09-19 08:38:07,366 - mylog - INFO - accounts_out.json file not available
+2022-09-19 08:38:07,618 - mylog - INFO - ==============Clean job started===============
+2022-09-19 08:38:07,619 - mylog - INFO - opening the json file ../json/outgoing/accounts.json
+2022-09-19 08:38:07,640 - mylog - INFO - replacing the occurrences of junk character from ../json/outgoing/accounts.json
+2022-09-19 08:38:07,702 - mylog - INFO - remove the last character from file from ../json/outgoing/accounts.json
+2022-09-19 08:38:07,719 - mylog - INFO - cleansing completed and new file has been created ../json/outgoing/accounts_out.json
+2022-09-19 08:38:07,728 - mylog - INFO - ../json/outgoing/accounts.json file is deleted
+2022-09-19 08:38:07,733 - mylog - INFO - Push json for the batch size 10 loaded records between 0 and 10 to kafka
+2022-09-19 08:38:07,734 - mylog - INFO - ==============Kafka job started==============
+2022-09-19 08:38:07,739 - mylog - INFO - accounts kafka push successes for the records between 0 and 10
+2022-09-19 08:38:07,741 - mylog - INFO - ==============Batch  0 completed ==============
+2022-09-19 08:38:07,741 - mylog - INFO - ==============Batch  1 started ============== 
+2022-09-19 08:38:07,742 - mylog - INFO - Generating the json for the batch size 10 loaded records between 10 and 20
+2022-09-19 08:38:07,743 - mylog - INFO - ==============Generate json job started ==============
+2022-09-19 08:38:07,754 - mylog - INFO - accounts_out.json file is deleted
+2022-09-19 08:38:07,756 - mylog - INFO - accounts_out.json file not available
+2022-09-19 08:38:07,910 - mylog - INFO - ==============Clean job started===============
+2022-09-19 08:38:07,911 - mylog - INFO - opening the json file ../json/outgoing/accounts.json
+2022-09-19 08:38:07,928 - mylog - INFO - replacing the occurrences of junk character from ../json/outgoing/accounts.json
+2022-09-19 08:38:07,988 - mylog - INFO - remove the last character from file from ../json/outgoing/accounts.json
+2022-09-19 08:38:08,005 - mylog - INFO - cleansing completed and new file has been created ../json/outgoing/accounts_out.json
+2022-09-19 08:38:08,013 - mylog - INFO - ../json/outgoing/accounts.json file is deleted
+2022-09-19 08:38:08,019 - mylog - INFO - Push json for the batch size 10 loaded records between 10 and 20 to kafka
+2022-09-19 08:38:08,019 - mylog - INFO - ==============Kafka job started==============
+2022-09-19 08:38:08,023 - mylog - INFO - accounts kafka push successes for the records between 10 and 20
+2022-09-19 08:38:08,024 - mylog - INFO - ==============Batch  1 completed ==============
+2022-09-19 08:38:08,025 - mylog - INFO - ==============Batch  2 started ============== 
+2022-09-19 08:38:08,026 - mylog - INFO - Generating the json for the batch size 10 loaded records between 20 and 30
+2022-09-19 08:38:08,028 - mylog - INFO - ==============Generate json job started ==============
+2022-09-19 08:38:08,041 - mylog - INFO - accounts_out.json file is deleted
+2022-09-19 08:38:08,043 - mylog - INFO - accounts_out.json file not available
+2022-09-19 08:38:08,168 - mylog - INFO - ==============Clean job started===============
+2022-09-19 08:38:08,168 - mylog - INFO - opening the json file ../json/outgoing/accounts.json
+2022-09-19 08:38:08,186 - mylog - INFO - replacing the occurrences of junk character from ../json/outgoing/accounts.json
+2022-09-19 08:38:08,244 - mylog - INFO - remove the last character from file from ../json/outgoing/accounts.json
+2022-09-19 08:38:08,260 - mylog - INFO - cleansing completed and new file has been created ../json/outgoing/accounts_out.json
+2022-09-19 08:38:08,267 - mylog - INFO - ../json/outgoing/accounts.json file is deleted
+2022-09-19 08:38:08,273 - mylog - INFO - Push json for the batch size 10 loaded records between 20 and 30 to kafka
+2022-09-19 08:38:08,276 - mylog - INFO - ==============Kafka job started==============
+2022-09-19 08:38:08,280 - mylog - INFO - accounts kafka push successes for the records between 20 and 30
+2022-09-19 08:38:08,281 - mylog - INFO - ==============Batch  2 completed ==============
+2022-09-19 08:38:08,282 - mylog - INFO - ==============Batch  3 started ============== 
+2022-09-19 08:38:08,282 - mylog - INFO - Generating the json for the batch size 10 loaded records between 30 and 40
+2022-09-19 08:38:08,283 - mylog - INFO - ==============Generate json job started ==============
+2022-09-19 08:38:08,294 - mylog - INFO - accounts_out.json file is deleted
+2022-09-19 08:38:08,295 - mylog - INFO - accounts_out.json file not available
+2022-09-19 08:38:08,419 - mylog - INFO - ==============Clean job started===============
+2022-09-19 08:38:08,420 - mylog - INFO - opening the json file ../json/outgoing/accounts.json
+2022-09-19 08:38:08,431 - mylog - INFO - replacing the occurrences of junk character from ../json/outgoing/accounts.json
+2022-09-19 08:38:08,489 - mylog - INFO - remove the last character from file from ../json/outgoing/accounts.json
+2022-09-19 08:38:08,505 - mylog - INFO - cleansing completed and new file has been created ../json/outgoing/accounts_out.json
+2022-09-19 08:38:08,513 - mylog - INFO - ../json/outgoing/accounts.json file is deleted
+2022-09-19 08:38:08,519 - mylog - INFO - Push json for the batch size 10 loaded records between 30 and 40 to kafka
+2022-09-19 08:38:08,520 - mylog - INFO - ==============Kafka job started==============
+2022-09-19 08:38:08,525 - mylog - INFO - accounts kafka push successes for the records between 30 and 40
+2022-09-19 08:38:08,526 - mylog - INFO - ==============Batch  3 completed ==============
+2022-09-19 08:38:08,527 - mylog - INFO - ==============Batch  4 started ============== 
+2022-09-19 08:38:08,529 - mylog - INFO - Generating the json for the batch size 10 loaded records between 40 and 50
+2022-09-19 08:38:08,530 - mylog - INFO - ==============Generate json job started ==============
+2022-09-19 08:38:08,543 - mylog - INFO - accounts_out.json file is deleted
+2022-09-19 08:38:08,545 - mylog - INFO - accounts_out.json file not available
+2022-09-19 08:38:08,661 - mylog - INFO - ==============Clean job started===============
+2022-09-19 08:38:08,662 - mylog - INFO - opening the json file ../json/outgoing/accounts.json
+2022-09-19 08:38:08,672 - mylog - INFO - replacing the occurrences of junk character from ../json/outgoing/accounts.json
+2022-09-19 08:38:08,731 - mylog - INFO - remove the last character from file from ../json/outgoing/accounts.json
+2022-09-19 08:38:08,747 - mylog - INFO - cleansing completed and new file has been created ../json/outgoing/accounts_out.json
+2022-09-19 08:38:08,752 - mylog - INFO - ../json/outgoing/accounts.json file is deleted
+2022-09-19 08:38:08,758 - mylog - INFO - Push json for the batch size 10 loaded records between 40 and 50 to kafka
+2022-09-19 08:38:08,759 - mylog - INFO - ==============Kafka job started==============
+2022-09-19 08:38:08,761 - mylog - INFO - accounts kafka push successes for the records between 40 and 50
+2022-09-19 08:38:08,762 - mylog - INFO - ==============Batch  4 completed ==============
+2022-09-19 08:38:08,762 - mylog - INFO - ==============Batch  5 started ============== 
+2022-09-19 08:38:08,763 - mylog - INFO - Generating the json for the batch size 10 loaded records between 50 and 60
+2022-09-19 08:38:08,763 - mylog - INFO - ==============Generate json job started ==============
+2022-09-19 08:38:08,772 - mylog - INFO - accounts_out.json file is deleted
+2022-09-19 08:38:08,773 - mylog - INFO - accounts_out.json file not available
+2022-09-19 08:38:08,885 - mylog - INFO - ==============Clean job started===============
+2022-09-19 08:38:08,886 - mylog - INFO - opening the json file ../json/outgoing/accounts.json
+2022-09-19 08:38:08,896 - mylog - INFO - replacing the occurrences of junk character from ../json/outgoing/accounts.json
+2022-09-19 08:38:08,953 - mylog - INFO - remove the last character from file from ../json/outgoing/accounts.json
+2022-09-19 08:38:08,968 - mylog - INFO - cleansing completed and new file has been created ../json/outgoing/accounts_out.json
+2022-09-19 08:38:08,977 - mylog - INFO - ../json/outgoing/accounts.json file is deleted
+2022-09-19 08:38:08,983 - mylog - INFO - Push json for the batch size 10 loaded records between 50 and 60 to kafka
+2022-09-19 08:38:08,984 - mylog - INFO - ==============Kafka job started==============
+2022-09-19 08:38:08,989 - mylog - INFO - accounts kafka push successes for the records between 50 and 60
+2022-09-19 08:38:08,991 - mylog - INFO - ==============Batch  5 completed ==============
+2022-09-19 08:38:08,996 - mylog - INFO - ==============Splitting recon JSON files to smaller chunks==============
+2022-09-19 08:38:08,998 - mylog - INFO - Splitting accounts json file started
+2022-09-19 08:38:09,118 - mylog - INFO - Splitting accounts json file Completed
+2022-09-19 08:38:09,119 - mylog - INFO - ==============Converting recon JSON smaller chunks to CSV files started ==============
+2022-09-19 08:38:09,120 - mylog - INFO - directory ======> ../json/recon/accounts/, table_name ====> accounts
+2022-09-19 08:38:09,135 - mylog - INFO - f==> ../json/recon/accounts/accounts_out0.json filename ======> accounts_out0.json, table_name ====> accounts
+2022-09-19 08:38:09,298 - mylog - INFO - ==============Converting recon JSON smaller chunks to CSV files completed==============
+2022-09-19 08:38:09,299 - mylog - INFO - ************===========Starting to load TM response to recon table========************
